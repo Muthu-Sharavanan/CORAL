@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import gsap from 'gsap';
 import { 
   Smile, 
   ChevronLeft, 
@@ -78,6 +79,11 @@ const ServiceDetail = () => {
     } else {
       window.scrollTo(0, 0);
     }
+
+    gsap.fromTo('.detail-container > *', 
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power4.out' }
+    );
   }, [id]);
 
   return (

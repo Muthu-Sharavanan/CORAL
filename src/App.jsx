@@ -28,13 +28,13 @@ const Navbar = () => (
   <nav className="fixed-nav">
     <Link to="/" className="nav-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
       <Smile color="#0D9488" size={32} />
-      <span>CORAL DENTISTRY</span>
+      <span>CORAL</span>
     </Link>
     <div className="nav-links">
-      <Link to="/#services">Services</Link>
-      <Link to="/#about">About</Link>
-      <Link to="/#contact">Contact</Link>
-      <Link to="/book" className="pill-button" style={{ textDecoration: 'none' }}>Book Now</Link>
+      <Link to="/#services">SERVICES</Link>
+      <Link to="/#about">ABOUT</Link>
+      <Link to="/#contact">CONTACT</Link>
+      <Link to="/book" className="pill-button" style={{ textDecoration: 'none' }}>BOOK NOW</Link>
     </div>
   </nav>
 );
@@ -45,7 +45,7 @@ const Footer = () => (
       <div className="footer-brand">
         <div className="nav-logo">
           <Smile color="#0D9488" size={32} />
-          <span>CORAL DENTISTRY</span>
+          <span>CORAL</span>
         </div>
         <p style={{ marginTop: '1.5rem', color: '#888' }}>
           Setting the benchmark for premium dental care in South India.
@@ -100,6 +100,8 @@ const Home = () => {
     const canvas = canvasRef.current;
     const ambientCanvas = ambientCanvasRef.current;
     
+    if (!canvas || !ambientCanvas) return;
+
     canvas.width = window.innerWidth * window.devicePixelRatio;
     canvas.height = window.innerHeight * window.devicePixelRatio;
     ambientCanvas.width = window.innerWidth * window.devicePixelRatio;
@@ -166,11 +168,13 @@ const Home = () => {
           <canvas ref={ambientCanvasRef} id="ambient-canvas" />
           <canvas ref={canvasRef} id="hero-canvas" />
           <div className="hero-overlay">
-            <div className="hero-badge">Thoothukudi's Premium Care</div>
-            <h1 className="heading-xl hero-title">PRECISION<br />SMILE ENGINE</h1>
+            <div className="hero-badge">EXPERIENCE MODERN DENTISTRY</div>
+            <h1 className="heading-xl hero-title">
+              YOUR SMILE<br />OUR MASTERPIECE
+            </h1>
             <p className="hero-sub">
-              Where world-class technology meets compassionate dental science.
-              Crafting smiles that last a lifetime.
+              Advanced dental care meets cinematic luxury. We don't just treat teeth;
+              we design smiles that last a lifetime.
             </p>
             <Link to="/book" className="pill-button" style={{ marginTop: '2rem', pointerEvents: 'auto', textDecoration: 'none' }}>
               Book Appointment
