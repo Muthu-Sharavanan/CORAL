@@ -19,6 +19,8 @@ import heroTooth from './assets/hero_tooth.png';
 import clinicBanner from './assets/clinic_banner.png';
 import BookingForm from './components/BookingForm';
 import ServiceDetail from './pages/ServiceDetail';
+import About from './pages/About';
+import Technology from './pages/Technology';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +34,8 @@ const Navbar = () => (
     </Link>
     <div className="nav-links">
       <Link to="/#services">SERVICES</Link>
-      <Link to="/#about">ABOUT</Link>
+      <Link to="/about">ABOUT</Link>
+      <Link to="/technology">TECHNOLOGY</Link>
       <Link to="/#contact">CONTACT</Link>
       <Link to="/book" className="pill-button" style={{ textDecoration: 'none' }}>BOOK NOW</Link>
     </div>
@@ -336,6 +339,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/book" element={<BookingPage />} />
           <Route path="/service/:id" element={<ServiceDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
         <ScrollToTop />
         <Footer />
